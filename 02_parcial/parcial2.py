@@ -25,7 +25,7 @@ def cargar_catalogo(nombre_archivo):
         lector = csv.DictReader(archivo)
         for fila in lector:
             titulo = fila.get("TITULO", "").strip()
-            cadena = fila.get("CANTIDAD", "").strip()
+            cantidad_cadena = fila.get("CANTIDAD", "").strip()
 
             # Validaciones: título no vacío, cantidad debe ser dígitos (entero no negativo)
             if titulo == "":
